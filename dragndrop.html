@@ -14,6 +14,7 @@
   <body>
     <section id="canvas-zone">
       <div id='zoomin' class="dragndrop__btn dragndrop__elt"><i class="fas fa-search"></i></div>
+      <input id="lockheight" type="checkbox">Lock Height</input>
       <div id='content'></div>
       <div class="dragndrop">
         <div id='droppable' class="dropzone dragndrop__elt"><i class="fas fa-trash"></i></div>
@@ -72,7 +73,13 @@
 	      move (event) {
 		  
 		  position.x= pos_map.get(tar_id).x + event.dx
-		  position.y= 300; //pos_map.get(tar_id).y + event.dy
+		  position.y= pos_map.get(tar_id).y + event.dy
+          
+          var lockCheckbox = document.getElementById("lockheight");
+          if (lockCheckbox.checked) {
+            position.y = 300;
+          }
+          
 		  pos_map.set(tar_id, {x:position.x, y:position.y})		 
 		  
 		  event.target.style.left =
