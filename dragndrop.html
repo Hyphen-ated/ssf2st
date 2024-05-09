@@ -72,7 +72,7 @@
 	      move (event) {
 		  
 		  position.x= pos_map.get(tar_id).x + event.dx
-		  position.y= pos_map.get(tar_id).y + event.dy
+		  position.y= 300; //pos_map.get(tar_id).y + event.dy
 		  pos_map.set(tar_id, {x:position.x, y:position.y})		 
 		  
 		  event.target.style.left =
