@@ -40,7 +40,7 @@ body {
 }
 
 .p2 {
-  transform: scaleX(-1);
+  transform: translate(-50%, -50%) scaleX(-1);
 }
 
 i {
@@ -89,6 +89,7 @@ img {
     position: absolute;
     touch-action: none;
     user-select: none;
+    transform: translate(-50%, -50%);
 }
 
 img:active {
@@ -96,9 +97,9 @@ img:active {
 }
 
 section.zoomedIn img {
-    transform: scale(2);
+    transform: translate(-50%, -50%) scale(2);
 }
 
 section.zoomedIn img.p2 {
-    transform: scale(-2, 2);
+    transform: translate(-50%, -50%) scale(-2, 2);
 }
