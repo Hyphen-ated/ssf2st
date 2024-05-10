@@ -65,7 +65,7 @@
 	      start (event) {
 		  tar_id=event.target.id
 		  if ( ! pos_map.has(tar_id) ) {
-		      pos_map.set(tar_id, {x:0, y:0})    
+		      pos_map.set(tar_id, {x:300, y:300})
 		  }
 		  console.log(event.type, event.target, position, event.target.id)
 		  event.target.parentNode.appendChild(event.target);
