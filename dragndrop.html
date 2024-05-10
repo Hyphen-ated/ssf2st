@@ -40,13 +40,13 @@
       function insertImageP1(src) {
           var id = $.generateId();
           var opacity = 1;
-          $('#content').append('<img id="'+ id + '" style="top:300px; left:300px;" class="draggable"' + 'src="' + src + '"/>');
+          $('#content').append('<img id="'+ id + '" style="top:500px; left:300px;" class="draggable"' + 'src="' + src + '"/>');
       }
 
       function insertImageP2(src) {
           var id = $.generateId();
           var opacity = 1;
-          $('#content').append('<img id="'+ id + '" style="top:300px; left:300px;" class="draggable p2"' + 'src="' + src + '" />');
+          $('#content').append('<img id="'+ id + '" style="top:500px; left:300px;" class="draggable p2"' + 'src="' + src + '" />');
       }
 
       $(function() {
@@ -56,7 +56,7 @@
 	  });
       });
 
-      const position = { x: 300, y: 300 }
+      const position = { x: 300, y: 500 }
       const pos_map = new Map()
       var tar_id = ""
       
@@ -65,7 +65,7 @@
 	      start (event) {
 		  tar_id=event.target.id
 		  if ( ! pos_map.has(tar_id) ) {
-		      pos_map.set(tar_id, {x:300, y:300})
+		      pos_map.set(tar_id, {x:300, y:500})
 		  }
 		  console.log(event.type, event.target, position, event.target.id)
 		  event.target.parentNode.appendChild(event.target);
